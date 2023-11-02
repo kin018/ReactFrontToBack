@@ -1,9 +1,11 @@
-//used rfce to generate this initial code snippet(ES7 React/Redux/GraphQL/React-Native snippets)
-//can use _rfce to generate same code except this does not have import React statement since it is not neccessary.
-//I have removed the import statement for consistency with tutorial
-
-function Header() {
-  return <div></div>;
+function Header(props) {
+  return (
+    <header>
+      <div className="container">
+        <h2>{props.text}</h2>
+      </div>
+    </header>
+  );
 }
 
 export default Header;
