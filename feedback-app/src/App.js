@@ -13,20 +13,22 @@ function App() {
 
   if (loading) return <h1>Loading...</h1>;
 
+  let commentBlock = (
+    <div className="comments">
+      <h3>Comments ({comments.length})</h3>
+      <ul>
+        {comments.map((item, index) => (
+          <li key={index}>{item.text}</li> //make sure to add a key when creating a list using map to the child element
+        ))}
+      </ul>
+    </div>
+  );
+
   return (
     <div className="container">
       <h1>{title}</h1>
       <p>{body}</p>
-      {showComments ? (
-        <div className="comments">
-          <h3>Comments ({comments.length})</h3>
-          <ul>
-            {comments.map((item, index) => (
-              <li key={index}>{item.text}</li> //make sure to add a key when creating a list using map to the child element
-            ))}
-          </ul>
-        </div>
-      ) : null}
+      {showComments && commentBlock}
     </div>
   );
 }
