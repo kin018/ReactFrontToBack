@@ -1,5 +1,5 @@
-function Header({ text }) {
-  const headerStyles = { backgroundColor: 'blue', color: 'red' }; //this or in the style prop we would do this instead {{    const headerStyles ={ backgroundColor: 'blue', color: 'red' }}}
+function Header({ text, bgColor, textColor }) {
+  const headerStyles = { backgroundColor: bgColor, color: textColor }; //this or in the style prop we would do this instead {{    const headerStyles ={ backgroundColor: 'blue', color: 'red' }}}
   return (
     <header style={headerStyles}>
       <div className="container">
