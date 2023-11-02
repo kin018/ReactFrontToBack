@@ -10,7 +10,10 @@ function Header({ text, bgColor, textColor }) {
 }
 
 Header.defaultProps = {
+  //if nothing is explicitly passed in APP.js header then these default values will be passed
   text: 'Feedback UI',
+  bgColor: 'rgba(0,0,0,0.4)',
+  textColor: '#ff6a95',
 };
 
 export default Header;
