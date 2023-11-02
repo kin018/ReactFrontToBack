@@ -8,7 +8,7 @@ function App() {
     <>
       <Header />
       <div className="container">
-        <FeedbackItem></FeedbackItem>
+        <FeedbackItem />
       </div>
     </>
   );
