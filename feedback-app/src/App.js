@@ -7,21 +7,39 @@ function App() {
     { id: 2, text: 'comment 2' },
     { id: 3, text: 'comment 3' },
   ];
+
+  let loading = false;
+  let showComments = true;
+
+  if (loading) return <h1>Loading...</h1>;
+
   return (
     <div className="container">
       <h1>{title}</h1>
       <p>{body}</p>
-
-      <div className="comments">
-        <h3>Comments ({comments.length})</h3>
-        <ul>
-          {comments.map((item, index) => (
-            <li key={index}>{item.text}</li> //make sure to add a key when creating a list using map to the child element
-          ))}
-        </ul>
-      </div>
+      {showComments ? (
+        <div className="comments">
+          <h3>Comments ({comments.length})</h3>
+          <ul>
+            {comments.map((item, index) => (
+              <li key={index}>{item.text}</li> //make sure to add a key when creating a list using map to the child element
+            ))}
+          </ul>
+        </div>
+      ) : null}
     </div>
   );
 }
 
 export default App;
+//line 29 instead of null we can do this..
+// {showComments && (
+//   <div className="comments">
+//     <h3>Comments ({comments.length})</h3>
+//     <ul>
+//       {comments.map((item, index) => (
+//         <li key={index}>{item.text}</li> //make sure to add a key when creating a list using map to the child element
+//       ))}
+//     </ul>
+//   </div>
+// ) : null}
