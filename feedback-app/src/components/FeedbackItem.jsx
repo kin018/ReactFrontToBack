@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 function FeedbackItem() {
-  //[NAMEOFSTATE, FUNC]
+  //[NAMEOFSTATE, FUNCTION]
   const [rating, setRating] = useState(7);
   const [text, setText] = useState(
     'This is an example of a feedback item jawn'
