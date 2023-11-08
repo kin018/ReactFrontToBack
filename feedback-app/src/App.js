@@ -7,7 +7,17 @@ function App() {
   //[NAMEOFSTATE, FUNCTION]
   const [feedback, setFeedback] = useState(FeedbackData);
   const deleteFeedback = (id) => {
-    console.log('jawn', id);
+    if (
+      window.confirm(
+        'You are about to delete this Feedback, Are you sure you would like to continue?'
+      )
+    ) {
+      setFeedback(
+        feedback.filter((item) => {
+          return item.id !== id;
+        })
+      );
+    }
   };
   return (
     <>
