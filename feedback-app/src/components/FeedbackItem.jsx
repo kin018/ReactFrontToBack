@@ -3,8 +3,8 @@ import React from 'react';
 import Card from './shared/Card'; // ignore this is correct
 
 function FeedbackItem({ item }) {
-  const handleClick = () => {
-    console.log(item.id);
+  const handleClick = (id) => {
+    console.log(id);
   };
 
   return (
