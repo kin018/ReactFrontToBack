@@ -1,7 +1,7 @@
 import React from 'react';
 import FeedbackItem from './FeedbackItem';
 
-function FeedbackList({ feedback }) {
+function FeedbackList({ feedback, handleDelete }) {
   if (!feedback || feedback.length === 0) {
     return <p>No FeedBack</p>;
   }
@@ -11,7 +11,7 @@ function FeedbackList({ feedback }) {
         <FeedbackItem
           key={item.id}
           item={item}
-          handleDelete={(id) => console.log(id)} //PASSING IN HANDLE DELETE AS A PROP INTO FEEDBACK ITEM
+          handleDelete={handleDelete} //PASSING IN HANDLE DELETE AS A PROP INTO FEEDBACK ITEM
         /> //item is the prop name and {item} comes from feeback.map item param
       ))}
     </div>
