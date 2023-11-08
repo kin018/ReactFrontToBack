@@ -8,7 +8,11 @@ function FeedbackList({ feedback }) {
   return (
     <div className="feedback-list">
       {feedback.map((item) => (
-        <FeedbackItem key={item.id} item={item} /> //item is the prop name and {item} comes from feeback.map item param
+        <FeedbackItem
+          key={item.id}
+          item={item}
+          handleDelete={(id) => console.log(id)} //PASSING IN HANDLE DELETE AS A PROP INTO FEEDBACK ITEM
+        /> //item is the prop name and {item} comes from feeback.map item param
       ))}
     </div>
   );
