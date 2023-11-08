@@ -1,5 +1,7 @@
+import {} from 'react-icons/fa';
 import React from 'react';
 import Card from './shared/Card'; // ignore this is correct
+
 function FeedbackItem({ item }) {
   return (
     <Card>
