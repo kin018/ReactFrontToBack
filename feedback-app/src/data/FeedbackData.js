@@ -14,6 +14,11 @@ const FeedbackData = [
     rating: 10,
     text: "The service provided was exceptional. I couldn't be happier with it.",
   },
+  {
+    id: 4,
+    rating: 9,
+    text: 'I found the overall experience to be quite satisfying. Will recommend it to others.',
+  },
 ];
 
 export default FeedbackData;
