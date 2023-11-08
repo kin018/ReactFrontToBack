@@ -9,7 +9,7 @@ function App() {
   const deleteFeedback = (id) => {
     if (
       window.confirm(
-        'You are about to delete this Feedback, Are you sure you would like to continue?'
+        'Warning: This action will delete the feedback. Are you certain you want to proceed?'
       )
     ) {
       setFeedback(
