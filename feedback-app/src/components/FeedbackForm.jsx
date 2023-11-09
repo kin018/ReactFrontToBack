@@ -1,7 +1,8 @@
 import React from 'react';
+import Card from './shared/Card';
 
 function FeedbackForm() {
-  return <div>Form</div>;
+  return <Card>FORM</Card>;
 }
 
 export default FeedbackForm;
