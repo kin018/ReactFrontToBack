@@ -21,7 +21,7 @@ function FeedbackForm() {
             placeholder="Share your thoughts with a review."
             value={text}
           />
-          <button type="submit">Submit</button>
+          <Button type="submit">Submit</Button>
         </div>
       </form>
     </Card>
