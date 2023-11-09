@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button() {
+function Button({ children, version, type, isDisabled }) {
   return <div></div>;
 }
 
