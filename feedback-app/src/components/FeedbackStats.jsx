@@ -2,7 +2,7 @@ import React from 'react';
 
 function FeedbackStats({ feedback }) {
   let totalRating = feedback.reduce((acc, curr) => acc + curr.rating, 0);
-  let avgRating = (totalRating / feedback.length).toFixed(2);
+  let avgRating = (totalRating / feedback.length).toFixed(1);
 
   return (
     <div className="feedback-stats">
