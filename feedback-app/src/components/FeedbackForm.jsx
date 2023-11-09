@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import React from 'react';
 import Card from './shared/Card';
+import Button from './shared/Button';
 
 function FeedbackForm() {
   const [text, setText] = useState('');
