@@ -7,7 +7,7 @@ function FeedbackStats({ feedback }) {
   return (
     <div className="feedback-stats">
       <h4>{feedback.length} Reviews</h4>
-      <h4>Average Rating: {avgRating}</h4>
+      <h4>Average Rating: {isNaN(avgRating) ? 0 : avgRating}</h4>
     </div>
   );
 }
