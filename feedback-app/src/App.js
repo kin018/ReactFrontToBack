@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import Header from './components/Header';
 import FeedbackData from './data/FeedbackData';
@@ -25,7 +26,8 @@ function App() {
   const addFeedback = (
     newFeedback
   ) /* remember newFeedback is a param this could very well be called jawn or anything else */ => {
-    console.log(newFeedback);
+    newFeedback.id = uuidv4(); //added an id to newFeedback object of the uuid
+    setFeedback([newFeedback, ...feedback]); //calls setFeedBack useState but we call the arr adding the new feedback to the to the front exisiting feedback arr which are objs(... is a spread operator)
   };
 
   return (
