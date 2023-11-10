@@ -26,11 +26,13 @@ function FeedbackForm() {
   };
 
   const handleSubmit = (eventParam) => {
-    eventParam.preventDefult();
+    eventParam.preventDefault(); //prevent default behavior which is submitting to actual file
+    //if statement to make sure user cant manipulate devtools to get around error handling in handleTextChange
     if (text.trim().length > 10) {
+      //constructing a new obj
       const newFeedback = {
-        text,
-        rating,
+        text: text, //comes from state which is connected to text field
+        rating: rating,
       };
       console.log(newFeedback);
     }
