@@ -22,7 +22,11 @@ function App() {
     }
   };
 
-  const addFeedback = () => {};
+  const addFeedback = (
+    newFeedback
+  ) /* remember newFeedback is a param this could very well be called jawn or anything else */ => {
+    console.log(newFeedback);
+  };
 
   return (
     <>
