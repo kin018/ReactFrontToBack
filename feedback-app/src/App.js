@@ -5,6 +5,8 @@ import FeedbackData from './data/FeedbackData';
 import FeedbackList from './components/FeedbackList';
 import FeedbackStats from './components/FeedbackStats';
 import FeedbackForm from './components/FeedbackForm';
+import AboutPage from './pages/AboutPage';
+import { BrowserRouter as Router, Route } from 'react-router-dom'; //Two types are browser router and hash router but browser is most common
 
 function App() {
   //[NAMEOFSTATE, FUNCTION]
@@ -31,14 +33,19 @@ function App() {
   };
 
   return (
-    <>
+    <Router>
       <Header />
       <div className="container">
-        <FeedbackForm handleAdd={addFeedback} />
-        <FeedbackStats feedback={feedback} />
-        <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+        <Route exact path="/">
+          <FeedbackForm handleAdd={addFeedback} />
+          <FeedbackStats feedback={feedback} />
+          <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+        </Route>
+
+        <Route path="/about" component={AboutPage} />
+        {/* <Route path='/about'>This is the about route</Route> One way to do it  */}
       </div>
-    </>
+    </Router>
   );
 }
 
